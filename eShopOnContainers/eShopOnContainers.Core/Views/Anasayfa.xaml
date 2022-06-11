@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:eShopOnContainers.Core.ViewModels"
+             x:Class="eShopOnContainers.Core.Views.Anasayfa"
+             xmlns:animations="clr-namespace:eShopOnContainers.Core.Animations;assembly=eShopOnContainers.Core"
+             xmlns:templates="clr-namespace:eShopOnContainers.Core.Views.Templates;assembly=eShopOnContainers.Core"
+             xmlns:triggers="clr-namespace:eShopOnContainers.Core.Triggers;assembly=eShopOnContainers.Core"
+             xmlns:viewModelBase="clr-namespace:eShopOnContainers.Core.ViewModels.Base;assembly=eShopOnContainers.Core"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels"
+             xmlns:views="clr-namespace:eShopOnContainers.Core.Views;assembly=eShopOnContainers.Core"
+             xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             BackgroundColor="#191919"
+             
+             >
+
+
+    <StackLayout>
+        <StackLayout.BindingContext>
+            <local:AnasayfaViewModel></local:AnasayfaViewModel>
+        </StackLayout.BindingContext>
+        <AbsoluteLayout HorizontalOptions="Center" Padding="0,10">
+            <Label FontSize="20" HorizontalTextAlignment="Center" TextColor="#F4F4F4" Text="B E Y M E N"/>
+        </AbsoluteLayout>
+        <ScrollView>
+            <StackLayout HorizontalOptions="Fill" Padding="10" Spacing="10">
+                <!--İlk Carousel Başı-->
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="360"/>
+                        </Grid.RowDefinitions>
+
+
+                        <CarouselView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" Margin="0,0,0,0" IsBounceEnabled="True"  ItemsSource="{Binding IlkCarouselView}"
+                      IndicatorView="indicatorView">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+
+                                    <Image Aspect="AspectFit" VerticalOptions="Start" Source="{Binding ilkCarouselImage}" 
+                                       
+                                        />
+
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" HorizontalOptions="Center" VerticalOptions="End"   x:Name="indicatorView"  
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="#CC9544"
+                       IndicatorsShape="Circle"
+                       
+                       />
+
+                    </Grid>
+                </StackLayout>
+                <!--İlk carousel sonu-->
+
+                <!--İkinci carousel başı-->
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="360"/>
+                        </Grid.RowDefinitions>
+
+                        <CarouselView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" Margin="0" IsBounceEnabled="True" ItemsSource="{Binding IkinciCarouselView}"
+                      IndicatorView="indicatorView2"
+                                          >
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+
+                                    <Image Aspect="AspectFill" VerticalOptions="Start" Source="{Binding ikinciCarouselImage}" 
+                                       
+                                        />
+
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" VerticalOptions="EndAndExpand"   x:Name="indicatorView2"  
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="#CC9544"
+                       HorizontalOptions="Center"
+                       />
+
+                    </Grid>
+                </StackLayout>
+                <!--İkinci carousel sonu-->
+
+                <!--Üçüncü carousel başı-->
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="360"/>
+                        </Grid.RowDefinitions>
+
+                        <CarouselView Grid.Row="0" Grid.Column="0" VerticalOptions="Start" Margin="0" IsBounceEnabled="True" ItemsSource="{Binding UcuncuCarouselView}"
+                      IndicatorView="indicatorView3"
+                                          >
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+
+                                    <Image Aspect="AspectFill" VerticalOptions="Start" Source="{Binding ucuncuCarouselImage}" 
+                                       
+                                        />
+
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                        <IndicatorView Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" VerticalOptions="EndAndExpand"   x:Name="indicatorView3"  
+                       IndicatorColor="Gray"
+                       SelectedIndicatorColor="#CC9544"
+                       HorizontalOptions="Center"
+                       />
+
+                    </Grid>
+                </StackLayout>
+                <!--Üçüncü carousel sonu-->
+                <StackLayout>
+                    <Image Aspect="Fill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022108131652231.png"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022311370028927.jpg"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022813343339524.png"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/12gmobil_2022021909075743358.png"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022813345730167.png"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Aspect="AspectFill" Source="https://cdn.beymen.com/bannerimages/9GMobile_2022022813353067824.png"/>
+                </StackLayout>
+
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+    </StackLayout>
+
+</views:ContentPageBase>

@@ -3,7 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:eShopOnContainers.Core.Views"
-    x:Class="eShopOnContainers.Core.AppShell">
+    x:Class="eShopOnContainers.Core.AppShell"
+    BackgroundColor="Black">
 
     <Shell.Resources>
         <ResourceDictionary>
@@ -31,6 +32,7 @@
     </FlyoutItem>
 
     <TabBar Route="Main">
+        <ShellContent Title="Anasayfa" Route="Anasayfa" Icon="https://img.icons8.com/material/96/000000/home--v5.png" ContentTemplate="{DataTemplate views:Anasayfa}" />
         <ShellContent Title="CATALOG" Route="Catalog" Icon="{StaticResource CatalogIconImageSource}" ContentTemplate="{DataTemplate views:CatalogView}" />
         <ShellContent Title="PROFILE" Route="Profile" Icon="{StaticResource ProfileIconImageSource}" ContentTemplate="{DataTemplate views:ProfileView}" />
     </TabBar>

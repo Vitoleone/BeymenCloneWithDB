@@ -9,6 +9,7 @@ namespace eShopOnContainers.Core.Views
         public ContentPageBase()
         {
             NavigationPage.SetBackButtonTitle (this, string.Empty);
+            
         }
 
         protected override async void OnAppearing ()
