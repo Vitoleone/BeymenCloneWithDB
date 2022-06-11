@@ -13,7 +13,8 @@
                 x:DataType="viewmodels:LoginViewModel"
                 Shell.FlyoutBehavior="Disabled"
                 Shell.NavBarIsVisible="False"
-                Shell.TabBarIsVisible="False">
+                Shell.TabBarIsVisible="False"
+                BackgroundColor="#191919">
     <ContentPage.Title>
         <OnPlatform x:TypeArguments="x:String">
             <On Platform="iOS, UWP, WinRT, WinPhone" Value="eShop on Containers" />
@@ -144,8 +145,9 @@
                         Text="["
                         TextColor="{StaticResource LightGreenColor}"/>
                     <Label
-                        Text="LOGIN"
-                        FontAttributes="Bold"/>
+                        Text="Giriş Yap"
+                        FontAttributes="Bold"
+                        TextColor="#F4F4F4"/>
                     <Label
                         Text="]"
                         TextColor="{StaticResource LightGreenColor}"/>
@@ -154,7 +156,7 @@
                   Grid.Column="1"
                   HorizontalOptions="Center">
                     <Label
-                        Text="REGISTER"
+                        Text="Kayıt Ol"
                         TextColor="Gray"/>
                 </Grid>
                 <StackLayout  
@@ -162,7 +164,8 @@
                   Orientation="Horizontal"
                   HorizontalOptions="Center">
                     <Label
-                        Text="SETTINGS"/>
+                        Text="Ayarlar"
+                        TextColor="#F4F4F4"/>
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer
                             Command="{Binding SettingsCommand}"
@@ -170,19 +173,14 @@
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
             </Grid>
-            <!-- INFO -->
-            <Label
-              Grid.Row="1"
-              Text="ARE YOU REGISTERED?"
-              Style="{StaticResource TitleLabelStyle}"/>
             <!-- LOGIN FORM -->
             <StackLayout   
                 Grid.Row="3"
                 Margin="24">
                 <Label
-                  Text="User name or email"
-                  Style="{StaticResource HeaderLabelStyle}" />
-                <Entry Text="{Binding UserName.Value, Mode=TwoWay}">
+                  Text="Kullanıcı adı veya e-mail"
+                  Style="{StaticResource HeaderLabelStyle}" TextColor="#F4F4F4" />
+                <Entry Text="{Binding UserName.Value, Mode=TwoWay}" Placeholder="Kullanıcı adı veya e-mail" PlaceholderColor="Gray">
 					<Entry.Style>
                         <OnPlatform x:TypeArguments="Style">
                             <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
@@ -207,11 +205,15 @@
 					Text="{Binding UserName.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
 					Style="{StaticResource ValidationErrorLabelStyle}" />
                 <Label
-                  Text="Password"
-                  Style="{StaticResource HeaderLabelStyle}"/>
+                  Text="Şifre"
+                  Style="{StaticResource HeaderLabelStyle}"
+                    TextColor="#F4F4F4"
+                    />
                 <Entry
                   IsPassword="True"
-                  Text="{Binding Password.Value, Mode=TwoWay}">
+                  Text="{Binding Password.Value, Mode=TwoWay}"
+                    BackgroundColor="White"
+                    Placeholder="Şifre">
                     <Entry.Style>
                         <OnPlatform x:TypeArguments="Style">
                             <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
@@ -236,12 +238,12 @@
 					Text="{Binding Password.Errors, Converter={StaticResource FirstValidationErrorConverter}}"
 					Style="{StaticResource ValidationErrorLabelStyle}" />
             </StackLayout>
-            <Frame CornerRadius="16" HasShadow="False" Padding="0" IsClippedToBounds="True"
+            <Frame CornerRadius="16" HasShadow="False" Padding="0" IsClippedToBounds="True" BackgroundColor="#191919"
                    HorizontalOptions="Center"
                    Grid.Row="2" >
-                <Image
-                    Source="eshop_logo.png"
-                    Aspect="AspectFit" />
+                <AbsoluteLayout HorizontalOptions="Center" Padding="0,10">
+                    <Label FontSize="40" HorizontalTextAlignment="Center" TextColor="#F4F4F4" Text="B E Y M E N"/>
+                </AbsoluteLayout>
             </Frame>
             <!-- LOGIN BUTTON -->
             <Grid
