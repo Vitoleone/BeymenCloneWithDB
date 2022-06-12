@@ -14,7 +14,11 @@
              BackgroundColor="#191919"
              
              >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding GoBackCommand}"></BackButtonBehavior>
+    </Shell.BackButtonBehavior>
     <ScrollView>
+        
         <StackLayout >
 
             <Grid VerticalOptions="Center" HorizontalOptions="Center" ColumnSpacing="0" RowSpacing="10" >

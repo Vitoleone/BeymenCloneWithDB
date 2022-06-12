@@ -79,7 +79,7 @@ namespace eShopOnContainers
         void SetStatusBar()
         {
             var nav = Current.MainPage as NavigationPage;
-
+           
             var e = DependencyService.Get<ITheme>();
             if (Current.RequestedTheme == OSAppTheme.Dark)
             {

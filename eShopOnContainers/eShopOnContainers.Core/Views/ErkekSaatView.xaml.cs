@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using eShopOnContainers.Core.Models.Search;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace eShopOnContainers.Core.Views
 {
@@ -26,14 +27,16 @@ namespace eShopOnContainers.Core.Views
         };
         public ErkekSaatView()
         {
+            InitializeComponent();
             urunler = new ObservableCollection<UrunModel>(urunlerSourceSol);
 
             myCollectionView.ItemsSource = urunler;
 
 
             BindingContext = this;
-            InitializeComponent();
+            
         }
+        public ICommand GoBackCommand => new Command(execute: () => { Navigation.PushAsync(new ErkekKategoriView()); });
         private void myCollectionView_SelectionChanged(object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             var ayakkabiUrun = e.CurrentSelection.FirstOrDefault() as UrunModel;

@@ -14,6 +14,9 @@
              BackgroundColor="#191919"
              
              >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding GoBackCommand}"></BackButtonBehavior>
+    </Shell.BackButtonBehavior>
     <ScrollView>
 
 

@@ -32,7 +32,8 @@
     </FlyoutItem>
 
     <TabBar Route="Main">
-        <ShellContent Title="Anasayfa" Route="Anasayfa" Icon="https://img.icons8.com/material/96/000000/home--v5.png" ContentTemplate="{DataTemplate views:Anasayfa}" />
+        
+        <ShellContent Title="Anasayfa"  Route="Anasayfa" Icon="https://img.icons8.com/material/96/000000/home--v5.png" ContentTemplate="{DataTemplate views:Anasayfa}" />
         <ShellContent Title="Arama" Route="Arama" Icon="https://img.icons8.com/material-two-tone/96/000000/search.png" ContentTemplate="{DataTemplate views:SearchView}" />
         <ShellContent Title="CATALOG" Route="Catalog" Icon="{StaticResource CatalogIconImageSource}" ContentTemplate="{DataTemplate views:CatalogView}" />
         <ShellContent Title="PROFILE" Route="Profile" Icon="{StaticResource ProfileIconImageSource}" ContentTemplate="{DataTemplate views:ProfileView}" />
