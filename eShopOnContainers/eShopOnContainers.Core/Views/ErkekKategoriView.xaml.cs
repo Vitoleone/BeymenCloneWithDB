@@ -19,17 +19,17 @@ namespace eShopOnContainers.Core.Views
         }
         private void ErkekSaat(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Anasayfa());
+            Navigation.PushAsync(new ErkekSaatView());
 
         }
 
         private void ErkekGiyim(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Anasayfa());
+            Navigation.PushAsync(new ErkekGiyimView());
         }
         private void ErkekAyakkabi(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Anasayfa());
+            Navigation.PushAsync(new ErkekAyakkabiView());
         }
     }
 }
