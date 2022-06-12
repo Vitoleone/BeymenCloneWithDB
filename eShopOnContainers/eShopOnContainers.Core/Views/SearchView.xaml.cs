@@ -79,12 +79,12 @@ namespace eShopOnContainers.Core.Views
 
             if (b.Name == "KADIN")
             {
-                Navigation.PushAsync(new Anasayfa());
+                Navigation.PushAsync(new KategoriAltSayfasiView());
 
             }
             else if (b.Name == "ERKEK")
             {
-                Navigation.PushAsync(new Anasayfa());
+                Navigation.PushAsync(new ErkekKategoriView());
 
             }
         }
