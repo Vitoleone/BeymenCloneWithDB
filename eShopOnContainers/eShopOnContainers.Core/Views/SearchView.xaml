@@ -14,7 +14,11 @@
              BackgroundColor="#191919"
              
              >
-    
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsEnabled="False" IconOverride="" ></BackButtonBehavior>
+
+    </Shell.BackButtonBehavior>
+
     <StackLayout>
        
         <SearchBar Placeholder="Ürün, marka ya da kategori ara"

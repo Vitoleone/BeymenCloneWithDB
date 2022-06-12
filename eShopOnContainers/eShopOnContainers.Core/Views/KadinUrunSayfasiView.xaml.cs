@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using eShopOnContainers.Core.Models.Search;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace eShopOnContainers.Core.Views
 {
@@ -28,7 +29,8 @@ namespace eShopOnContainers.Core.Views
             urunIndirimsizlbl.Text = Price;
 
         }
-
+        //public ICommand GoBackCommand => new Command(execute: () => { Navigation.PopAsync(); });
+        public ICommand GoBackCommand => new Command(execute: () => { Navigation.RemovePage(this);});
         private void Button_Clicked(object sender, EventArgs e)
         {
 

@@ -14,6 +14,10 @@
              BackgroundColor="#191919"
              
              >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding GoBackCommand}"></BackButtonBehavior>
+       
+    </Shell.BackButtonBehavior>
     <ScrollView>
         <StackLayout Spacing="0" Padding="5">
             <Image x:Name="urunResmi" Source="kadin">
