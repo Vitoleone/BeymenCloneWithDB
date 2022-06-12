@@ -30,6 +30,8 @@ namespace eShopOnContainers.Core
             Routing.RegisterRoute ("CampaignDetails", typeof(CampaignDetailsView));
             Routing.RegisterRoute ("Checkout", typeof (CheckoutView));
             Routing.RegisterRoute ("Anasayfa", typeof (Anasayfa));
+            Routing.RegisterRoute ("Arama", typeof (SearchView));
+
             
         }
 

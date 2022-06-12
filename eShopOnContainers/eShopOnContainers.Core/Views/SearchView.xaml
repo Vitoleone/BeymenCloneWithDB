@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:eShopOnContainers.Core.ViewModels"
+             x:Class="eShopOnContainers.Core.Views.SearchView"
+             xmlns:animations="clr-namespace:eShopOnContainers.Core.Animations;assembly=eShopOnContainers.Core"
+             xmlns:templates="clr-namespace:eShopOnContainers.Core.Views.Templates;assembly=eShopOnContainers.Core"
+             xmlns:triggers="clr-namespace:eShopOnContainers.Core.Triggers;assembly=eShopOnContainers.Core"
+             xmlns:viewModelBase="clr-namespace:eShopOnContainers.Core.ViewModels.Base;assembly=eShopOnContainers.Core"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels"
+             xmlns:views="clr-namespace:eShopOnContainers.Core.Views;assembly=eShopOnContainers.Core"
+             xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             BackgroundColor="#191919"
+             
+             >
+    
+    <StackLayout>
+       
+        <SearchBar Placeholder="Ürün, marka ya da kategori ara"
+                       x:Name="searchBar"
+                       TextChanged="searchBar_TextChanged"
+                       BackgroundColor="LightGray"
+                       Margin="10,10,10,0"/>
+
+        <CollectionView x:Name="myCollectionView"
+                            SelectionChanged="Kadin"
+                            SelectionMode="Single"
+                            ItemsSource="{Binding products}"
+                            
+                            >
+
+
+            <CollectionView.EmptyView>
+
+                <ContentView>
+
+                    <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                        <Label Text="Sonuç Bulunamadı."
+                           Margin="10,25,10,10"
+                           TextColor="LightGray"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                </ContentView>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+                    <StackLayout Padding="0,0,0,0" >
+                        <Frame BackgroundColor="Transparent"
+                               Padding="0,0,0,0"
+                               CornerRadius="0"
+
+                               >
+                            <StackLayout>
+
+                                <Grid HorizontalOptions="Center"
+                                        VerticalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image HorizontalOptions="Center"
+                                            Source="{Binding Image}"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Margin="10,10,10,0">
+
+                                    </Image>
+
+
+                                    <Label HorizontalOptions="Start"
+                                            VerticalOptions="Center"
+                                            Text="{Binding Name}"
+                                            Margin="10,0,0,0"
+                                            BackgroundColor="#F7CCAC"
+                                            TextColor="#3A3845"
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            FontSize="35"
+                                            Padding="30,0,0,0"
+                                            HeightRequest="50"
+                                            WidthRequest="200"/>
+
+                                </Grid>
+
+                            </StackLayout>
+
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </StackLayout>
+</views:ContentPageBase>
