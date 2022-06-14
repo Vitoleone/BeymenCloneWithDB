@@ -9,7 +9,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Firebase.Auth;
 namespace eShopOnContainers.Core.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -40,7 +40,7 @@ namespace eShopOnContainers.Core.Views
 
         private async void ShowError()
         {
-            await DisplayAlert("Authentication Failed", "Email or password are incorrect. Try again!", "OK");
+            await DisplayAlert("Giriş Başarısız!", "E-mail veya şifre yanlış. Tekrar deneyin!", "Tamam");
 
         }
     }
