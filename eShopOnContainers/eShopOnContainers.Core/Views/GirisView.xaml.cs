@@ -17,21 +17,17 @@ namespace eShopOnContainers.Core.Views
     [DesignTimeVisible(false)]
     public partial class GirisView : ContentPage
     {
-        IFirebaseAuthentication auth;
+        
 
         public GirisView()
         {
             InitializeComponent();
-            auth = DependencyService.Get<IFirebaseAuthentication>();
+            
         }
 
         private async void SignOutButton_Clicked(object sender, EventArgs e)
         {
-            var signedOut = auth.SignOut();
-            if (signedOut)
-            {
-                Application.Current.MainPage = new LoginView();
-            }
+            
         }
     }
 }

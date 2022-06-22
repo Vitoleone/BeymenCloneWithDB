@@ -20,21 +20,16 @@ namespace eShopOnContainers
     public partial class App : Application
     {
         ISettingsService _settingsService;
-        IFirebaseAuthentication auth;
+       
         public App()
         {
             InitializeComponent();
 
             InitApp();
-            auth = DependencyService.Get<IFirebaseAuthentication>();
-            if (auth.IsSignIn())
-            {
-                MainPage = new GirisView();
-            }
-            else
-            {
+           
+
                 MainPage = new LoginView();
-            }
+           
             //MainPage = new AppShell ();
         }
         

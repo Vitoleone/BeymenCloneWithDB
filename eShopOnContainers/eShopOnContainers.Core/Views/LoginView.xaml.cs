@@ -16,26 +16,18 @@ namespace eShopOnContainers.Core.Views
     public partial class LoginView : ContentPage
     {
         LoginViewModel viewModel;
-        IFirebaseAuthentication auth;
+        
 
         public LoginView()
         {
             InitializeComponent();
-            auth = DependencyService.Get<IFirebaseAuthentication>();
+            
             BindingContext = viewModel = new LoginViewModel();
         }
 
         private async void LoginButton_Clicked(object sender, EventArgs e)
         {
-            string token = await auth.LoginWithEmailAndPassword(viewModel.Username, viewModel.Password);
-            if (token != string.Empty)
-            {
-                Application.Current.MainPage = new GirisView();
-            }
-            else
-            {
-                ShowError();
-            }
+         
         }
 
         private async void ShowError()

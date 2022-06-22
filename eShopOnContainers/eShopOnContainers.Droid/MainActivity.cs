@@ -25,7 +25,7 @@ namespace eShopOnContainers.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            Xamarin.Forms.DependencyService.Register<FirebaseAuthentication>();
+           
             //FirebaseApp.InitializeApp(Application.Context);
             var options = new FirebaseOptions.Builder()
             .SetApplicationId("beymen - 41561")
