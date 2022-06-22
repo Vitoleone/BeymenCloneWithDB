@@ -41,7 +41,7 @@ namespace eShopOnContainers.Core.Views
             }
             else
             {
-                await DisplayAlert("bilgi", "E mail veya şifre yanlış!", "OK");
+                await DisplayAlert("Giriş", "E mail veya şifre yanlış!", "Tamam");
 
             }
 
@@ -58,11 +58,11 @@ namespace eShopOnContainers.Core.Views
             string token = await fblogin.DoRegisterWithEP(email, pass);
             if (!string.IsNullOrEmpty(token))
             {
-                await DisplayAlert("bilgi", "Kayıt işlemi başarılı.", "OK");
+                await DisplayAlert("Kayıt", "Kayıt işlemi başarılı.", "Tamam");
             }
             else
             {
-                await DisplayAlert("bilgi", "Bir hata oluştu.", "OK");
+                await DisplayAlert("Hata", "E-mail formatı yanlış veya mail alınmış.", "Tamam");
 
             }
         }
