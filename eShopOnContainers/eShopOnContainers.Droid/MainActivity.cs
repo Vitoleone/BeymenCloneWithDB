@@ -6,9 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using eShopOnContainers.Droid.Activities;
 using eShopOnContainers.Droid.Services;
-using Firebase;
 using System;
 using Xamarin.Forms.Platform.Android;
+using Firebase.Auth;
 
 namespace eShopOnContainers.Droid
 {
@@ -27,11 +27,11 @@ namespace eShopOnContainers.Droid
 
            
             //FirebaseApp.InitializeApp(Application.Context);
-            var options = new FirebaseOptions.Builder()
-            .SetApplicationId("beymen - 41561")
-            .SetApiKey("AIzaSyDljeRsnrxwjtyNSspE6QlCVnAGLUpM8vI")
-            .SetStorageBucket("beymen-41561.appspot.com").Build();
-            var fapp = FirebaseApp.InitializeApp(this, options);
+            //var options = new FirebaseOptions.Builder()
+            //.SetApplicationId("beymen - 41561")
+            //.SetApiKey("AIzaSyDljeRsnrxwjtyNSspE6QlCVnAGLUpM8vI")
+            //.SetStorageBucket("beymen-41561.appspot.com").Build();
+            //var fapp = FirebaseApp.InitializeApp(this, options);
 
             LoadApplication(new App());
         }

@@ -8,38 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:682416100372:android:d03fcf45ba89d52c3e4301",
+        "mobilesdk_app_id": "1:682416100372:android:e5eb5d18c733a7303e4301",
         "android_client_info": {
-          "package_name": "com.oop2.beymen"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "682416100372-1bks08sefpitrt75kivnnksq5jo74tj7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDljeRsnrxwjtyNSspE6QlCVnAGLUpM8vI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "682416100372-1bks08sefpitrt75kivnnksq5jo74tj7.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:682416100372:android:afe9e97a599f1c4c3e4301",
-        "android_client_info": {
-          "package_name": "com.oop2.beymen"
+          "package_name": "com.beymen"
         }
       },
       "oauth_client": [
