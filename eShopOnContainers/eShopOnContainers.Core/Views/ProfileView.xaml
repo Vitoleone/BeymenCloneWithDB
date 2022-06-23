@@ -8,7 +8,7 @@
     xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels"
     xmlns:views="clr-namespace:eShopOnContainers.Core.Views;assembly=eShopOnContainers.Core"
     xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-    Title="MY PROFILE"
+    Title="Profilim"
     viewModelBase:ViewModelLocator.AutoWireViewModel="true"
     x:DataType="viewmodels:ProfileViewModel">
     <ContentPage.Resources>
@@ -32,7 +32,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="LOGOUT" Command="{Binding LogoutCommand}" />
+        <ToolbarItem Text="Çıkış Yap" Command="{Binding LogoutCommand}" />
     </ContentPage.ToolbarItems>
 
     <!--  ORDERS  -->
@@ -41,7 +41,7 @@
             <Label
                 HorizontalOptions="Center"
                 IsVisible="{Binding Orders, Converter={StaticResource ListIsNullOrEmptyConverter}}"
-                Text="NO ORDERS"
+                Text="Sipariş yok.."
                 VerticalOptions="Center" />
         </Grid>
         <ListView
@@ -59,7 +59,7 @@
             <ListView.Header>
                 <Label
                     Style="{StaticResource MyOrdersLabelStyle}"
-                    Text="MY ORDERS" />
+                    Text="Siparişlerim" />
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>

@@ -28,9 +28,9 @@ namespace eShopOnContainers
             InitApp();
 
 
-            MainPage = new NavigationPage(new LoginView());
+            //MainPage = new NavigationPage(new LoginView());
            
-            //MainPage = new AppShell ();
+            MainPage = new AppShell ();
         }
         
 

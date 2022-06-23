@@ -37,7 +37,9 @@ namespace eShopOnContainers.Core.Views
 
             if (!string.IsNullOrEmpty(token))
             {
-                await Navigation.PushAsync(new Anasayfa());
+                //await Navigation.PushAsync(new AppShell());
+                await Shell.Current.GoToAsync("//Main/Anasayfa");
+                
             }
             else
             {
