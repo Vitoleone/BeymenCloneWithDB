@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:eShopOnContainers.Core.ViewModels"
+             x:Class="eShopOnContainers.Core.Views.SepetView"
+             xmlns:animations="clr-namespace:eShopOnContainers.Core.Animations;assembly=eShopOnContainers.Core"
+             xmlns:templates="clr-namespace:eShopOnContainers.Core.Views.Templates;assembly=eShopOnContainers.Core"
+             xmlns:triggers="clr-namespace:eShopOnContainers.Core.Triggers;assembly=eShopOnContainers.Core"
+             xmlns:viewModelBase="clr-namespace:eShopOnContainers.Core.ViewModels.Base;assembly=eShopOnContainers.Core"
+             xmlns:viewmodels="clr-namespace:eShopOnContainers.Core.ViewModels"
+             xmlns:views="clr-namespace:eShopOnContainers.Core.Views;assembly=eShopOnContainers.Core"
+             xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             BackgroundColor="#191919"
+             
+             >
+
+    <StackLayout>
+            <CollectionView ItemsSource="{Binding sepetUrunler}" x:Name="sepetimUrunler">
+                <CollectionView.EmptyView>
+                    <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="25" FontAttributes="Bold" TextColor="WhiteSmoke" Text="Sepetiniz Boş">
+
+                    </Label>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ScrollView x:Name="silinecekUrun">
+                            <StackLayout Spacing="10">
+
+                                <StackLayout Orientation="Horizontal" BackgroundColor="White">
+
+
+                                    <Image Source="{Binding Image}"  VerticalOptions="Center" WidthRequest="120" HeightRequest="200" Margin="0,0,0,0"  />
+                                    <StackLayout>
+
+                                        <StackLayout HorizontalOptions="CenterAndExpand"  Padding="0,14,0,0">
+                                            <Label Text="Beymen Club" TextColor="Black" FontAttributes="Bold" HorizontalOptions="StartAndExpand"></Label>
+                                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="14" TextColor="#D8D2CB" HorizontalOptions="StartAndExpand"></Label>
+
+                                            <Picker Title="Adet" TitleColor="Gray" FontAttributes="Bold" >
+                                                <Picker.Items>
+                                                    <x:String >1</x:String>
+                                                    <x:String >2</x:String>
+                                                    <x:String >3</x:String>
+                                                    <x:String >4</x:String>
+                                                    <x:String >5</x:String>
+                                                    <x:String >6</x:String>
+                                                    <x:String >7</x:String>
+                                                    <x:String >8</x:String>
+                                                    <x:String >9</x:String>
+                                                </Picker.Items>
+                                            </Picker>
+
+
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                                    <Label Text="Beden:" TextColor="Black"></Label>
+                                                    <Label Text="{Binding BedenPicker}" TextColor="Black"></Label>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                                    <Label  Text="Renk:" TextColor="Black" ></Label>
+                                                    <Label Text="{Binding RenkPicker}" TextColor="Black"></Label>
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout BackgroundColor="Red" Padding="5,5,5,5" HorizontalOptions="Center" VerticalOptions="Center">
+                                                    <Label FontSize="17" Text="{Binding DiscountedPrice}" TextColor="White" FontAttributes="Bold"></Label>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Vertical" Spacing="0">
+                                                    <Label  TextDecorations="Strikethrough" Text="{Binding Price}" FontSize="15"></Label>
+                                                    <Label  FontSize="17" TextColor="Black" FontAttributes="Bold" Text="{Binding Discount }"></Label>
+
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <Button Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent" ScaleX="0.5" ScaleY="0.5" ImageSource="copIcon">
+
+                                    </Button>
+
+
+                                </StackLayout>
+
+
+                                <BoxView HeightRequest="0"></BoxView>
+
+
+                            </StackLayout>
+                        </ScrollView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <AbsoluteLayout x:Name="SepetSatinalButon" HorizontalOptions="CenterAndExpand" >
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                    <Button  WidthRequest="350" Margin="0,0,0,20"  BackgroundColor="White"  TextColor="Black" Text="SATIN AL"></Button>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+</views:ContentPageBase>

@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using eShopOnContainers.Core.Models.Search;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using eShopOnContainers.Core.ViewModels;
 
 namespace eShopOnContainers.Core.Views
 {
@@ -31,8 +32,42 @@ namespace eShopOnContainers.Core.Views
         }
         //public ICommand GoBackCommand => new Command(execute: () => { Navigation.PopAsync(); });
         public ICommand GoBackCommand => new Command(execute: () => { Navigation.RemovePage(this);});
-        private void Button_Clicked(object sender, EventArgs e)
+        void SepeteEkle(object sender, EventArgs e)
         {
+            if (renkPicker.SelectedItem != null && bedenPicker.SelectedItem != null)
+            {
+                string renk = renkPicker.SelectedItem.ToString();
+                string beden = bedenPicker.SelectedItem.ToString();
+
+                DisplayAlert("", "Ürün sepetinize eklendi!", "Tamam");
+                ürünSayisi++;
+                SepetSingleton.Instance.SepeteEkle(urunler.Name, urunler.Image, urunler.DiscountedPrice, urunler.Price, urunler.Discount, beden, renk);
+
+            }
+            else
+            {
+                DisplayAlert("", "Lütfen renk ve beden seçiniz!", "Tamam");
+
+            }
+
+        }
+        void FavoriEkle(object sender, EventArgs e)
+        {
+            if (renkPicker.SelectedItem != null && bedenPicker.SelectedItem != null)
+            {
+                string renk = renkPicker.SelectedItem.ToString();
+                string beden = bedenPicker.SelectedItem.ToString();
+
+                DisplayAlert("", "Ürün favorilerinize eklendi!", "Tamam");
+                ürünSayisi++;
+                FavorilerSingleton.Instance.FavoriEkle(urunler.Name, urunler.Image, urunler.DiscountedPrice, urunler.Price, urunler.Discount, beden, renk);
+
+            }
+            else
+            {
+                DisplayAlert("", "Lütfen renk ve beden seçiniz!", "Tamam");
+
+            }
 
         }
     }

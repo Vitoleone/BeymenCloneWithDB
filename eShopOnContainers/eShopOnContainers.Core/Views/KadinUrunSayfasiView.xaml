@@ -64,8 +64,8 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="Center" WidthRequest="100" HeightRequest="70">
-                <Button  Clicked="Button_Clicked" Margin="0,0,5,0" WidthRequest="300" BackgroundColor="Black" TextColor="White" Text="SEPETE EKLE"></Button>
-                <Button  Padding="18,0,0,0" BorderWidth="2" BorderColor="Black" ImageSource="https://img.icons8.com/ios-filled/96/000000/filled-like.png" Margin="0,0,0,0" WidthRequest="70" BackgroundColor="White" TextColor="White" Text="SEPETE EKLE"></Button>
+                <Button  Clicked="SepeteEkle" Margin="0,0,5,0" WidthRequest="300" BackgroundColor="Black" TextColor="White" Text="SEPETE EKLE"></Button>
+                <Button  Clicked="FavoriEkle" Padding="18,0,0,0" BorderWidth="2" BorderColor="Black" ImageSource="https://img.icons8.com/ios-filled/96/000000/filled-like.png" Margin="0,0,0,0" WidthRequest="70" BackgroundColor="White" TextColor="White" Text="Favori"></Button>
             </StackLayout>
 
 
